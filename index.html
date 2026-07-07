@@ -55,17 +55,17 @@
         .hidden { display: none !important; }
         .container { max-width: 1200px; margin: 20px auto; padding: 20px; flex: 1; width: 100%; }
         
-        /* Fixed/Sticky Top Bar Configuration */
+        /* Fixed Position Top Header Configuration Update */
         header { 
-            margin: 10px 10px 30px 10px; 
+            position: sticky;
+            top: 0;
+            z-index: 1500;
+            margin: 10px 10px 20px 10px; 
             border-bottom: 2px solid var(--border-color); 
             padding: 15px 20px; 
             background: var(--surface-color);
             border-radius: 16px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 10px;
-            z-index: 1050;
             transition: background-color 0.3s;
         }
         .header-content-wrapper { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; position: relative; }
@@ -83,7 +83,7 @@
         .seo-content-block h1 { font-size: 2.2em; color: var(--primary-color); margin-bottom: 5px; margin-top: 0; }
         .seo-content-block h2 { font-size: 1.3em; color: var(--text-color-light); font-weight: 500; margin-top: 0; margin-bottom: 15px; }
         .seo-content-block p { font-size: 1.05em; color: var(--text-color); max-width: 800px; line-height: 1.7; }
-        #global-footer { background-color: #263238; color: #ecf0f1; padding: 30px 20px; text-align: center; margin-top: 40px; border-top: 4px solid var(--primary-color); margin-bottom: var(--nav-height); border-radius: 16px 16px 0 0; }
+        #global-footer { background-color: #263238; color: #ecf0f1; padding: 30px 20px; text-align: center; margin-top: 40px; border-top: 4px solid var(--primary-color); border-radius: 16px 16px 0 0; }
         .footer-main-links { margin-bottom: 15px; font-weight: bold; font-size: 1.1em; }
         .footer-main-links a { color: #fff; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
         .footer-main-links a:hover { color: var(--secondary-color); }
@@ -99,7 +99,7 @@
 
         .copyright { margin-top: 20px; font-size: 0.8em; color: #90A4AE; }
         
-        /* Bottom Navigation Curved Edges */
+        /* Bottom Navigation Layout Edges Config */
         .bottom-nav { position: fixed; bottom: 10px; left: 10px; right: 10px; width: calc(100% - 20px); height: var(--nav-height); background: var(--surface-color); border: 1px solid var(--border-color); display: flex; justify-content: space-around; align-items: center; z-index: 1000; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); border-radius: 16px; overflow: hidden; }
         .nav-btn { background: none; border: none; flex: 1; height: 100%; font-size: 14px; font-weight: 600; color: var(--text-color-light); cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: all 0.2s; }
         .nav-btn.active { color: var(--primary-color); background-color: var(--primary-lightest); }
@@ -129,7 +129,7 @@
         .fab-menu-btn { background: var(--surface-color); color: var(--text-color); border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer; font-weight: 600; text-align: right; }
         .fab-menu-btn:hover { background: var(--primary-lightest); color: var(--primary-color); border-color: var(--primary-color); }
         
-        /* Profile & Custom Dropdown Navigation Menu Framework Structure Configuration Container */
+        /* Profile Action Dropdown Core Framework Architecture Configuration Container */
         #editor-login-container { position: relative; }
         #editor-login-logo { width: 36px; height: 36px; cursor: pointer; color: var(--text-color-light); transition: color 0.2s; display: block; }
         #editor-login-logo:hover { color: var(--primary-color); }
@@ -149,7 +149,7 @@
         .profile-backend-link { font-size: 12px; margin-top: 5px; word-break: break-all; }
         .profile-backend-link a { color: var(--primary-darker); }
         
-        #admin-panel { background-color: var(--warning-bg); border: 2px solid var(--secondary-color); border-radius: var(--border-radius); padding: 15px 20px; margin: -10px auto 20px auto; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; font-weight: 500; }
+        #admin-panel { background-color: var(--warning-bg); border: 2px solid var(--secondary-color); border-radius: var(--border-radius); padding: 15px 20px; margin: 0 auto 20px auto; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; font-weight: 500; }
         #admin-panel-info { font-size: 1.1em; color: var(--secondary-darker); }
         .card { background-color: var(--card-bg); border-radius: var(--border-radius); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); padding: 25px; margin-bottom: 25px; border: 1px solid var(--border-color); }
         .btn { display: inline-block; padding: 12px 20px; border: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; text-align: center; transition: background-color 0.2s, transform 0.1s; margin: 5px; }
@@ -290,7 +290,7 @@
         #student-loading.hidden { display: none; }
         .loader { border: 5px solid #f3f3f3; border-radius: 50%; border-top: 5px solid var(--primary-color); width: 50px; height: 50px; -webkit-animation: spin 1s linear infinite; animation: spin 1s linear infinite; margin-bottom: 20px; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .spreadsheet-container { overflow-x: auto; margin-bottom: 15px; border: 1px solid var(--border-color); max-height: 400px; } .spreadsheet-table { border-collapse: collapse; width: 100%; min-width: 800px; font-size: 13px; } .spreadsheet-table th, .spreadsheet-table td { border: 1px solid #ddd; padding: 0; min-width: 100px; position: relative; } .spreadsheet-table th { background: #ECEFF1; padding: 10px; text-align: left; font-weight: 600; position: sticky; top: 0; z-index: 10; border-bottom: 2px solid #B0BEC5; color: #37474F; } .spreadsheet-cell { width: 100%; height: 100%; min-height: 30px; padding: 8px; outline: none; white-space: pre-wrap; overflow: hidden; display: block; background: var(--surface-color); color: var(--text-color); font-size: 13px; } 
+        .spreadsheet-container { overflow-x: auto; margin-bottom: 15px; border: 1px solid var(--border-color); max-height: 400px; } .spreadsheet-table { border-collapse: collapse; width: 100%; min-width: 800px; font-size: 13px; } .spreadsheet-table th, .spreadsheet-table td { border: 1px solid #ddd; padding: 0; min-width: 100px; position: relative; } .spreadsheet-table th { background: #ECEFF1; padding: 10px; text-align: left; font-weight: 600; position: sticky; top: 0; z-index: 10; border-bottom: 2px solid #B0BEC5; color: #37474F; } .spreadsheet-cell { width: 100%; height: 100%; min-height: 30px; padding: 8px; outline: none; white-space: pre-wrap; overflow: hidden; display: block; background: var(--surface-color); color: var(--text-color); } 
         .spreadsheet-row-selected { background-color: var(--warning-bg) !important; }
         .spreadsheet-row-selected td { background-color: var(--warning-bg) !important; }
         .explanation-section { margin-top: 20px; background: var(--success-light); padding: 15px; border-radius: 8px; border: 1px solid #A5D6A7; } 
@@ -319,7 +319,7 @@
         .play-actions { display: flex; gap: 8px; margin-top: 20px; flex-wrap: nowrap; justify-content: space-between; }
         .play-actions .btn { flex: 1; padding: 10px 5px; font-size: 14px; min-width: 0; white-space: nowrap; }
         .play-nav-buttons { display: flex; gap: 8px; flex: 2; }
-        #quiz-timer { font-size: clamp(0.85em, 1.5vw, 1em); font-weight: 600; color: #00796B; text-align: right; margin-top: 5px; } .question-panel-header { font-weight: 700; font-size: 16px; margin-bottom: 12px; color: #00796B; } .question-panel { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; } .q-chip { width: 38px; height: 38px; border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 2px solid #ccc; user-select: none; font-weight: 600; font-size: 14px; transition: all 0.2s; } .q-chip.green { background: #d4edda; color: #155724; border-color: #8fd28f; } .q-chip.red { background: #f8d7da; color: #721c24; border-color: #f5c6cb; } .q-chip.yellow { background: #fff3cd; color: #856404; border-color: #ffeaa7; } .q-chip.active { outline: 3px solid #00796B; outline-offset: 2px; } .legend { margin-top: 15px; padding: 12px; background: #f8f9fa; border-radius: 6px; } .legend-title { font-weight: 600; margin-bottom: 8px; font-size: 13px; } .legend-item { display: block; margin-bottom: 6px; font-size: 12px; } .legend-item.green:before { color: #28a745; } .legend-item.red:before { color: #dc3545; } .legend-item.yellow:before { color: #ffc107; } .play-question-view { background: white; padding: 0; } .play-question-number { font-size: clamp(16px, 1.8vw, 18px); font-weight: 700; color: #00796B; margin-bottom: 15px; } .play-question-image { max-width: 100%; max-height: 400px; margin: 15px auto; border-radius: 8px; display: block; object-fit: contain; } .play-passage-section { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #00796B; } .play-passage-label { font-size: 12px; font-weight: 600; color: #666; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; } .play-options-container { margin: 15px 0; } .play-option { padding: clamp(10px, 1.8vw, 14px); border: 2px solid #ddd; border-radius: 8px; margin-bottom: 10px; cursor: pointer; transition: all 0.2s; background: white; font-size: clamp(14px, 1.6vw, 15px); display: flex; align-items: flex-start; gap: 10px; } .play-option:hover:not(.disabled) { border-color: #00796B; background: #EBF9EB; transform: translateX(5px); } .play-option.selected { border-color: #00796B; background: #EBF9EB; font-weight: 600; } .play-option.disabled { opacity: 0.7; cursor: not-allowed; } .option-label { font-weight: 700; color: #00796B; min-width: 20px; padding-top: 2px;} .option-text { flex: 1; } .submit-inside-card { margin-top: 25px; padding-top: 20px; border-top: 2px solid #e3e3e3; text-align: center; } .submit-inside-card .btn { font-size: 16px; padding: 12px 40px; }
+        #quiz-timer { font-size: clamp(0.85em, 1.5vw, 1em); font-weight: 600; color: #00796B; text-align: right; margin-top: 5px; } .question-panel-header { font-weight: 700; font-size: 16px; margin-bottom: 12px; color: #00796B; } .question-panel { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; } .q-chip { width: 38px; height: 38px; border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 2px solid #ccc; user-select: none; font-weight: 600; font-size: 14px; transition: all 0.2s; } .q-chip.green { background: #d4edda; color: #155724; border-color: #8fd28f; } .q-chip.red { background: #f8d7da; color: #721c24; border-color: #f5c6cb; } .q-chip.yellow { background: #fff3cd; color: #856404; border-color: #ffeaa7; } .q-chip.active { outline: 3px solid #00796B; outline-offset: 2px; } .legend { margin-top: 15px; padding: 12px; background: #f8f9fa; border-radius: 6px; } .legend-title { font-weight: 600; margin-bottom: 8px; font-size: 13px; } .legend-item { display: block; margin-bottom: 6px; font-size: 12px; } .legend-item.green:before { color: #28a745; } .legend-item.red:before { color: #dc3545; } .legend-item.yellow:before { color: #ffc107; } .play-question-view { background: white; padding: 0; } .play-question-number { font-size: clamp(16px, 1.8vw, 18px); font-weight: 700; color: #00796B; margin-bottom: 15px; } .play-question-text { font-size: clamp(17px, 2vw, 20px); font-weight: 400; margin-bottom: 20px; color: #2c3e50; line-height: 1.5; } .play-question-image { max-width: 100%; max-height: 400px; margin: 15px auto; border-radius: 8px; display: block; object-fit: contain; } .play-passage-section { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #00796B; } .play-passage-label { font-size: 12px; font-weight: 600; color: #666; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; } .play-options-container { margin: 15px 0; } .play-option { padding: clamp(10px, 1.8vw, 14px); border: 2px solid #ddd; border-radius: 8px; margin-bottom: 10px; cursor: pointer; transition: all 0.2s; background: white; font-size: clamp(14px, 1.6vw, 15px); display: flex; align-items: flex-start; gap: 10px; } .play-option:hover:not(.disabled) { border-color: #00796B; background: #EBF9EB; transform: translateX(5px); } .play-option.selected { border-color: #00796B; background: #EBF9EB; font-weight: 600; } .play-option.disabled { opacity: 0.7; cursor: not-allowed; } .option-label { font-weight: 700; color: #00796B; min-width: 20px; padding-top: 2px;} .option-text { flex: 1; } .submit-inside-card { margin-top: 25px; padding-top: 20px; border-top: 2px solid #e3e3e3; text-align: center; } .submit-inside-card .btn { font-size: 16px; padding: 12px 40px; }
         .results-container { background: white; border-radius: 10px; padding: 30px; max-width: 900px; margin: 20px auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); color: #37474F; }
         .results-header { text-align: center; border-bottom: 3px solid #00796B; padding-bottom: 20px; margin-bottom: 30px; }
         .results-header h1 { color: #00796B; margin: 0 0 10px 0; font-size: 2.5em; }
@@ -897,12 +897,6 @@
             addKioskListener(document, "contextmenu", e => e.preventDefault());
         }
 
-        document.getElementById('btn-prev').addEventListener('click', () => { if (playState.index > 0) { playState.index--; renderPlayQuestion(); renderQuestionPanel(); if (playState.isKioskMode) saveKioskState(); } });
-        document.getElementById('btn-next').addEventListener('click', () => { if (playState.index < playState.questions.length - 1) { playState.index++; questionsSinceLastAd++; if(!playState.isAdFree && questionsSinceLastAd >= 2) { refreshAdsterraAd(); questionsSinceLastAd = 0; } renderPlayQuestion(); renderQuestionPanel(); if (playState.isKioskMode) saveKioskState(); } });
-        document.getElementById('btn-fix').addEventListener('click', () => { const q = playState.questions[playState.index]; if (q.selectedOption !== null && !q.fixed) { q.fixed = true; renderPlayQuestion(); renderQuestionPanel(); } });
-        document.getElementById('btn-mark').addEventListener('click', () => { const q = playState.questions[playState.index]; q.marked = !q.marked; renderPlayQuestion(); renderQuestionPanel(); });
-        document.getElementById('submit-quiz-btn').addEventListener('click', () => { showResults(); });
-
         function renderPlayQuestion() {
             const q = playState.questions[playState.index];
             const isLocked = q.locked || false; 
@@ -1152,7 +1146,6 @@
             }
         });
 
-        // Combined Menu Event Framework Router Router Trigger Architecture Mapping
         const syncActiveNavUI = (targetTab) => {
             document.querySelectorAll('.nav-btn, .dt-nav-btn').forEach(btn => {
                 btn.classList.remove('active', 'active-link');
@@ -1167,7 +1160,6 @@
             activeTab = targetTab;
             if (targetTab !== 'dashboard') currentPath = [];
             
-            // Set parameter cleanly without refreshing natively
             const url = new URL(window.location.origin + window.location.pathname);
             url.searchParams.set('page', targetTab);
             if (targetTab === 'dashboard' && currentPath.length > 0) {
@@ -1175,7 +1167,7 @@
             }
             window.history.pushState({ path: [...currentPath], activeTab: activeTab }, "", url);
             
-            syncActiveNavUI(targetTab);
+            syncActiveNavUI(activeTab);
             showDashboard();
             if(targetTab === 'home') fetchHomeData();
             if(humanDropdown) humanDropdown.classList.remove('open');
@@ -1189,11 +1181,26 @@
             });
         });
 
-        // Dynamic State Refresh Execution Controller Logic
+        // Dynamic State Screen Refresh Controller Implementation logic
+        const triggerStateRefreshEvent = () => {
+            if(activeTab === 'home') {
+                fetchHomeData();
+            } else if (activeTab === 'about') {
+                fetchAboutData();
+            } else if (activeTab === 'dashboard') {
+                const isUserLoggedIn = !!localStorage.getItem('editorProfile');
+                if (isUserLoggedIn && (localStorage.getItem('quiz_backend_url') || document.getElementById('backend-url').value.trim())) {
+                    document.getElementById('get-my-quizzes-btn').click();
+                } else {
+                    renderDashboard();
+                }
+            }
+        };
+
         if(navRefreshAction) {
             navRefreshAction.addEventListener('click', (e) => {
                 e.preventDefault();
-                location.reload();
+                triggerStateRefreshEvent();
             });
         }
 
@@ -1224,10 +1231,7 @@
         
         const showBuilder = (quizId = null) => { quizDashboard.classList.add('hidden'); aboutDashboard.classList.add('hidden'); searchPage.classList.add('hidden'); quizBuilder.classList.remove('hidden'); adminFab.classList.add('hidden'); resetBuilder(); if (quizId) { const quiz = findItem(quizId); if (quiz && quiz.type === 'quiz') { document.getElementById('download-quiz-btn').textContent = "Update Quiz & Save"; if(quiz.data) { document.getElementById('builder-title').textContent = `Editing: ${getDisplayName(quiz.name)}`; document.getElementById('editing-quiz-id').value = quizId; populateBuilder(quiz.data); } else if (quiz.backendSheetId) { alert("Fetching quiz data..."); fetchBackendQuizData(quiz.backendSheetId, quiz.sourceBackend).then(data => { if(data) { document.getElementById('builder-title').textContent = `Editing: ${getDisplayName(quiz.name)}`; document.getElementById('editing-quiz-id').value = quizId; data.backendSheetId = quiz.backendSheetId; populateBuilder(data); } else { showDashboard(); } }); } } } else { document.getElementById('builder-title').textContent = 'Create New Quiz'; document.getElementById('download-quiz-btn').textContent = "Download Quiz & Save"; createQuestionCard(); } };
         async function fetchBackendQuizData(sheetId, explicitBackendUrl = null) { const backendUrl = explicitBackendUrl || localStorage.getItem('quiz_backend_url') || document.getElementById('backend-url').value; if(!backendUrl) { console.error("No backend URL."); return null; } try { const res = await fetch(backendUrl, { method: 'POST', mode: 'cors', body: JSON.stringify({ action: 'get_quiz_data', sheetId: sheetId }) }); const result = await res.json(); if(result.status === 'success') return result.quizData; alert(result.message); return null; } catch(e) { alert("Fetch error: " + e); return null; } }
-        async function fetchAllBackendData(explicitBackendUrl) { 
-            // Rigid login enforcement security gate rule
-            if (!localStorage.getItem('editorProfile')) { return false; }
-            try { const response = await fetch(explicitBackendUrl, { method: 'POST', mode: 'cors', body: JSON.stringify({ action: 'get_all_data' }), }); const result = await response.json(); if (result.status === 'success') { const newDb = { items: [] }; const itemMap = new Map(); itemMap.set('root', newDb); if(result.folders) { result.folders.forEach(f => { if (!itemMap.has(f.id)) { const folder = { id: f.id, type: 'folder', name: f.name, items: [] }; itemMap.set(f.id, folder); } }); result.folders.forEach(f => { const folder = itemMap.get(f.id); const parent = itemMap.get(f.parentId) || itemMap.get('root'); if(parent && !parent.items.some(i => i.id === f.id)) { parent.items.push(folder); } }); } result.quizzes.forEach(quiz => { const parentId = quiz.parentId || 'root'; const parent = itemMap.get(parentId) || itemMap.get('root'); if (parent) { const quizItem = { id: `backend_${quiz.sheetId}`, type: 'quiz', name: quiz.name, backendSheetId: quiz.sheetId, data: null, subject: quiz.subject, difficulty: quiz.difficulty, timeLimit: quiz.timeLimit, isAdFree: quiz.isAdFree }; if (!parent.items.some(i => i.id === quizItem.id)) { parent.items.push(quizItem); } } }); const isSharedFetch = explicitBackendUrl !== localStorage.getItem('quiz_backend_url'); if (isSharedFetch) { function markShared(items) { items.forEach(i => { i.isShared = true; if(i.items) markShared(i.items); }); } markShared(newDb.items); sharedData = newDb; } else { saveDb(newDb); } return result; } return false; } catch(e) { console.error(e); return false; } }
+        async function fetchAllBackendData(explicitBackendUrl) { try { const response = await fetch(explicitBackendUrl, { method: 'POST', mode: 'cors', body: JSON.stringify({ action: 'get_all_data' }), }); const result = await response.json(); if (result.status === 'success') { const newDb = { items: [] }; const itemMap = new Map(); itemMap.set('root', newDb); if(result.folders) { result.folders.forEach(f => { if (!itemMap.has(f.id)) { const folder = { id: f.id, type: 'folder', name: f.name, items: [] }; itemMap.set(f.id, folder); } }); result.folders.forEach(f => { const folder = itemMap.get(f.id); const parent = itemMap.get(f.parentId) || itemMap.get('root'); if(parent && !parent.items.some(i => i.id === f.id)) { parent.items.push(folder); } }); } result.quizzes.forEach(quiz => { const parentId = quiz.parentId || 'root'; const parent = itemMap.get(parentId) || itemMap.get('root'); if (parent) { const quizItem = { id: `backend_${quiz.sheetId}`, type: 'quiz', name: quiz.name, backendSheetId: quiz.sheetId, data: null, subject: quiz.subject, difficulty: quiz.difficulty, timeLimit: quiz.timeLimit, isAdFree: quiz.isAdFree }; if (!parent.items.some(i => i.id === quizItem.id)) { parent.items.push(quizItem); } } }); const isSharedFetch = explicitBackendUrl !== localStorage.getItem('quiz_backend_url'); if (isSharedFetch) { function markShared(items) { items.forEach(i => { i.isShared = true; if(i.items) markShared(i.items); }); } markShared(newDb.items); sharedData = newDb; } else { saveDb(newDb); } return result; } return false; } catch(e) { console.error(e); return false; } }
 
         function renderDashboard() { const isHome = activeTab === 'home'; if (isHome) { homeSeoContent.classList.remove('hidden'); dashboardSeoContent.classList.add('hidden'); dashboardControls.classList.add('hidden'); } else { homeSeoContent.classList.add('hidden'); dashboardSeoContent.classList.remove('hidden'); dashboardControls.classList.remove('hidden'); } let rootDb = isHome ? globalHomeData : getDb(); let itemsToShow = []; if (currentPath.length === 0 || currentPath[0] === 'root') { itemsToShow = [...rootDb.items]; if (!isHome) itemsToShow = [...itemsToShow, ...sharedData.items]; } else { let tempFolder = rootDb, found = true; for (const folderId of currentPath) { if (folderId === 'root') continue; const nextFolder = tempFolder.items?.find(i => i.id === folderId); if (nextFolder) { tempFolder = nextFolder; } else { found = false; break; } } if (found && tempFolder !== rootDb) { itemsToShow = tempFolder.items || []; } else if (!isHome) { tempFolder = sharedData; let foundInShared = true; for (const folderId of currentPath) { if (folderId === 'root') continue; const nextFolder = tempFolder.items?.find(i => i.id === folderId); if(nextFolder) { tempFolder = nextFolder; } else { foundInShared = false; break; } } if(foundInShared) itemsToShow = tempFolder.items || []; } } let pathHTML = `<a href="?page=${activeTab}" data-folder-id="root">Home</a>`; currentPath.forEach(folderId => { if(folderId === 'root') return; const folder = findItem(folderId); if (folder) { pathHTML += `<span>&gt;</span><a href="#" data-folder-id="${folderId}">${getDisplayName(folder.name)}</a>`; } }); breadcrumbTrail.innerHTML = pathHTML; dashboardContent.innerHTML = ''; if (!itemsToShow || itemsToShow.length === 0) { dashboardContent.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: #888;">${isHome ? "" : "This folder is empty."}</p>`; if (isHome && document.getElementById('static-demo-quizzes').classList.contains('hidden')) { dashboardContent.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: #888;">No public quizzes found.</p>`; } return; } itemsToShow.sort((a, b) => { if (a.type === 'folder' && b.type !== 'folder') return -1; if (a.type !== 'folder' && b.type === 'folder') return 1; return (getDisplayName(a.name) || "").toString().localeCompare((getDisplayName(b.name) || "").toString()); }).forEach(item => { const itemEl = document.createElement('div'); itemEl.className = 'dashboard-item'; itemEl.dataset.id = item.id; itemEl.dataset.type = item.type; const displayName = getDisplayName(item.name) || "Untitled"; let badgeHTML = ''; if (isHome && item.editorUsername) { badgeHTML = `<span class="editor-badge">By: ${item.editorUsername}</span>`; } const optionsBtnHTML = isHome ? '' : `<button class="options-btn" title="Options">⋮</button>`; let tagsHTML = ''; if(item.type === 'quiz') { let idStr = item.backendSheetId || item.id; if(idStr.length > 10) idStr = idStr.substring(0,8) + '...'; let subjectTag = item.subject ? `<span class="tag-badge subject">${getDisplayName(item.subject)}</span>` : ''; let diffTag = item.difficulty ? `<span class="tag-badge difficulty">${item.difficulty}</span>` : ''; let timeTag = item.timeLimit ? `<span class="item-time">⏱️ ${item.timeLimit}m</span>` : ''; tagsHTML = `<div class="item-tags">${subjectTag} ${diffTag} <span>ID: ${idStr}</span> ${timeTag}</div>`; } if (item.type === 'quiz') { const isLocal = !!item.data; const canShare = isLocal || (item.backendSheetId); itemEl.classList.add('quiz-item'); itemEl.innerHTML = `<div class="item-actions">${canShare ? '<button class="share-btn" title="Share Link">🔗</button>' : ''}${optionsBtnHTML}</div><div class="card-content"><div class="card-icon">${isLocal ? '📝' : '⏰️'}</div><h3 class="item-name">${displayName}</h3>${badgeHTML}<span class="item-type-label">${isLocal ? 'Local Quiz' : 'Backend Quiz'}</span>${tagsHTML}</div>`; } else { itemEl.classList.add('folder-item'); itemEl.innerHTML = `<div class="item-actions"><button class="share-btn" title="Share Folder">🔗</button>${optionsBtnHTML}</div><div class="card-content"><div class="card-icon">📒</div><h3 class="item-name">${displayName}</h3>${badgeHTML}<span class="item-type-label">Folder</span></div>`; } dashboardContent.appendChild(itemEl); }); }
         
@@ -1266,7 +1270,6 @@
         function enterAdminMode() { sessionStorage.setItem('isAdmin', 'true'); adminPanel.classList.remove('hidden'); adminFab.classList.remove('hidden'); } function exitAdminMode() { sessionStorage.removeItem('isAdmin'); adminPanel.classList.add('hidden'); adminFab.classList.add('hidden'); alert('Exited Admin Mode. Reloading page.'); location.reload(); }
         function checkAdminStatus() { if (sessionStorage.getItem('isAdmin') === 'true') { adminPanel.classList.remove('hidden'); if(activeTab === 'about') adminFab.classList.remove('hidden'); } }
         
-        // Human Menu Trigger Assignments System Wireframe Layout Configuration Framework mapping logic updates
         document.getElementById('menu-action-create').addEventListener('click', () => { if(humanDropdown) humanDropdown.classList.remove('open'); actionModal.classList.remove('hidden'); document.getElementById('editor-create-account-modal').classList.remove('hidden'); });
         document.getElementById('menu-action-login').addEventListener('click', () => { if(humanDropdown) humanDropdown.classList.remove('open'); actionModal.classList.remove('hidden'); document.getElementById('editor-otp-login-modal').classList.remove('hidden'); });
         
@@ -1300,6 +1303,7 @@
             }
         });
 
+        // Safe Conditional Login State Hydration Flow Architecture
         function handleEditorLoginSuccess(profile) { 
             localStorage.setItem('editorProfile', JSON.stringify(profile)); 
             updateProfileCard(profile); 
@@ -1308,7 +1312,7 @@
             actionModal.classList.add('hidden'); 
             document.querySelectorAll('#action-modal-overlay .modal-card').forEach(m => m.classList.add('hidden')); 
             
-            // Only make button visible after authentic session configuration matches
+            // Explicit login checkpoint gated verification
             document.getElementById('get-my-quizzes-btn').classList.remove('hidden'); 
             
             if (profile.backendLink) { 
@@ -1320,7 +1324,7 @@
             } 
         }
         function updateProfileCard(profile) { document.getElementById('profile-username').textContent = profile.username; document.getElementById('profile-gmail').textContent = profile.gmail; const backendDetails = document.getElementById('profile-backend-details'); if (profile.backendLink) { backendDetails.innerHTML = `Backend: <a href="${profile.backendLink}" target="_blank" title="${profile.backendLink}">View Link</a>`; } else { backendDetails.innerHTML = `<span style="color:#d9534f; font-weight:bold;">Free Tier</span><br><button id="save-backend-link-btn" class="btn btn-primary" style="padding: 3px 8px; font-size: 11px; margin-top: 5px;">Upgrade</button>`; document.getElementById('save-backend-link-btn').addEventListener('click', async () => { const newLink = prompt('Enter your Quiz Data Script URL:'); if (newLink && newLink.startsWith('https://script.google.com')) { const result = await apiCall('update_editor_backend_link', { gmail: profile.gmail, backendLink: newLink }); if (result.status === 'success') { alert('Backend link saved! You are Pro.'); profile.backendLink = newLink; localStorage.setItem('editorProfile', JSON.stringify(profile)); updateProfileCard(profile); location.reload(); } else { alert('Error: ' + result.message); } } else if(newLink) { alert('Invalid URL.'); } }); } }
-        function checkEditorStatus() { const profile = localStorage.getItem('editorProfile'); if (profile) { handleEditorLoginSuccess(JSON.parse(profile)); } else { document.getElementById('get-my-quizzes-btn').classList.add('hidden'); } }
+        function checkEditorStatus() { const profile = localStorage.getItem('editorProfile'); if (profile) { handleEditorLoginSuccess(JSON.parse(profile)); } }
         
         let questionCount = 0, termsAndConditions = { content: null, type: null }, preQuizQuestions = [], isBackendConnected = false, logoSrc = null;
         document.getElementById('back-to-dashboard-btn').addEventListener('click', showDashboard); document.getElementById('create-new-quiz-btn').addEventListener('click', () => showBuilder());
@@ -1329,12 +1333,68 @@
         
         document.getElementById('quiz-logo').addEventListener('change', (e) => { const file = e.target.files[0]; const preview = document.getElementById('quiz-logo-preview'); if (file) { const reader = new FileReader(); reader.onload = (event) => { logoSrc = event.target.result; preview.src = logoSrc; preview.style.display = 'block'; }; reader.readAsDataURL(file); } else { logoSrc = null; preview.style.display = 'none'; } });
         const backendToggle = document.getElementById('backend-toggle'), backendIndependentToggle = document.getElementById('backend-independent-toggle'), backendDetailsContainer = document.getElementById('backend-details-container'), testBackendBtn = document.getElementById('test-backend-btn'), backendStatus = document.getElementById('backend-connection-status'), backendUrlInput = document.getElementById('backend-url'); 
-        const loadSavedBackendDetails = () => { const savedUrl = localStorage.getItem('quiz_backend_url'); if(savedUrl && localStorage.getItem('editorProfile')) { backendUrlInput.value = savedUrl; isBackendConnected = true; backendStatus.textContent = '✅ Restored connection.'; backendStatus.className = 'status-success'; document.getElementById('get-my-quizzes-btn').classList.remove('hidden'); } }; 
+        
+        const loadSavedBackendDetails = () => { 
+            // Lock loading check routine until active login state verification passes
+            const loggedInProfile = localStorage.getItem('editorProfile');
+            if(!loggedInProfile) {
+                isBackendConnected = false;
+                document.getElementById('get-my-quizzes-btn').classList.add('hidden');
+                return;
+            }
+            const savedUrl = localStorage.getItem('quiz_backend_url'); 
+            if(savedUrl) { 
+                backendUrlInput.value = savedUrl; 
+                isBackendConnected = true; 
+                backendStatus.textContent = '✅ Restored connection.'; 
+                backendStatus.className = 'status-success'; 
+                document.getElementById('get-my-quizzes-btn').classList.remove('hidden'); 
+            } 
+        }; 
         const updateBackendUI = () => { backendDetailsContainer.classList.toggle('hidden', !(backendToggle.checked || backendIndependentToggle.checked)); }; 
         backendToggle.addEventListener('change', updateBackendUI); backendIndependentToggle.addEventListener('change', updateBackendUI);
+        
         testBackendBtn.addEventListener('click', async () => { 
-            if (!localStorage.getItem('editorProfile')) { alert("You must be logged into an editor account to link a backend."); return; }
-            const url = backendUrlInput.value.trim(); if (!url) { backendStatus.className = 'status-error'; backendStatus.textContent = '❌ Please enter URL.'; return; } backendStatus.textContent = 'Testing...'; backendStatus.className = 'status-processing'; testBackendBtn.disabled = true; try { const response = await fetch(url, { method: 'POST', mode: 'cors', body: JSON.stringify({ action: 'test' }), }); const result = await response.json(); if (result.status === 'success') { isBackendConnected = true; localStorage.setItem('quiz_backend_url', url); backendStatus.className = 'status-success'; backendStatus.textContent = `✅ Connected! Use "Get My Quizzes" on dashboard.`; document.getElementById('get-my-quizzes-btn').classList.remove('hidden'); } else { throw new Error(result.message || 'Error'); } } catch (error) { isBackendConnected = false; backendStatus.className = 'status-error'; backendStatus.textContent = `❌ Connection Failed. Check URL & permissions.`; document.getElementById('get-my-quizzes-btn').add('hidden'); } finally { testBackendBtn.disabled = false; } });
+            // Gate backend connection changes strictly behind profile verification parameters
+            const loggedInProfile = localStorage.getItem('editorProfile');
+            if(!loggedInProfile) {
+                alert("Action Blocked: You must be logged in to connect or modify backend servers.");
+                isBackendConnected = false;
+                backendStatus.className = 'status-error';
+                backendStatus.textContent = '❌ Login Required.';
+                return;
+            }
+            
+            const url = backendUrlInput.value.trim(); 
+            if (!url) { 
+                backendStatus.className = 'status-error'; 
+                backendStatus.textContent = '❌ Please enter URL.'; 
+                return; 
+            } 
+            backendStatus.textContent = 'Testing...'; 
+            backendStatus.className = 'status-processing'; 
+            testBackendBtn.disabled = true; 
+            try { 
+                const response = await fetch(url, { method: 'POST', mode: 'cors', body: JSON.stringify({ action: 'test' }), }); 
+                const result = await response.json(); 
+                if (result.status === 'success') { 
+                    isBackendConnected = true; 
+                    localStorage.setItem('quiz_backend_url', url); 
+                    backendStatus.className = 'status-success'; 
+                    backendStatus.textContent = `✅ Connected! Use "Get My Quizzes" on dashboard.`; 
+                    document.getElementById('get-my-quizzes-btn').classList.remove('hidden'); 
+                } else { 
+                    throw new Error(result.message || 'Error'); 
+                } 
+            } catch (error) { 
+                isBackendConnected = false; 
+                backendStatus.className = 'status-error'; 
+                backendStatus.textContent = `❌ Connection Failed. Check URL & permissions.`; 
+                document.getElementById('get-my-quizzes-btn').classList.add('hidden'); 
+            } finally { 
+                testBackendBtn.disabled = false; 
+            } 
+        });
         
         const addQuestionBtn = document.getElementById('add-question-btn'), questionsContainer = document.getElementById('questions-container'), previewQuizBtn = document.getElementById('preview-quiz-btn'), downloadQuizBtn = document.getElementById('download-quiz-btn'), collectInfoToggle = document.getElementById('collect-info-toggle'), preQuizSection = document.getElementById('pre-quiz-questions-section');
         const addPreQuestionBtn = document.getElementById('add-pre-question-btn'), preQuestionModal = document.getElementById('add-pre-question-modal-overlay'), preQuestionLabel = document.getElementById('pre-question-label'), preQuestionType = document.getElementById('pre-question-type'), preQuestionOptionsContainer = document.getElementById('pre-question-options-container'), preQuestionOptions = document.getElementById('pre-question-options'), addPreQuestionConfirm = document.getElementById('add-pre-question-confirm'), addPreQuestionCancel = document.getElementById('add-pre-question-cancel'), preQuizList = document.getElementById('pre-quiz-questions-list'), scheduleQuizToggle = document.getElementById('schedule-quiz-toggle'), scheduleDetailsContainer = document.getElementById('schedule-details-container'); 
@@ -1373,15 +1433,87 @@
             const data = { quizTitle: title, organization: org, quizTopic: topic, timeLimit, subject, difficulty, nextTestTitle, nextTestUrl, questions: allQuestions, terms: termsAndConditions, preQuizQuestions: shouldCollectInfo ? preQuizQuestions : [], scheduledDateTime: scheduledDateTime, entryRestriction: entryRestriction, entryWindow: entryWindow, isIndependentBackend: document.getElementById('backend-independent-toggle').checked, logoSrc: logoSrc, folderStructure: folderStructure, hideResults: hideResults, isKioskMode: isKioskMode, shuffleQuestions: shuffleQuestions }; 
             const existingId = document.getElementById('editing-quiz-id').value; data.quizId = existingId || `id_${Date.now()}`; 
             const editorProfile = JSON.parse(localStorage.getItem('editorProfile') || '{}'); if (editorProfile.gmail) { data.editorGmail = editorProfile.gmail; data.editorUsername = editorProfile.username; }
-            if (currentPath.length > 0) { data.parentFolderId = currentPath[currentPath.length - 1]; } else { data.parentFolderId = 'root'; } if ((backendToggle.checked || backendIndependentToggle.checked) && isBackendConnected && localStorage.getItem('editorProfile')) { data.backendUrl = backendUrlInput.value.trim(); } return data; 
+            if (currentPath.length > 0) { data.parentFolderId = currentPath[currentPath.length - 1]; } else { data.parentFolderId = 'root'; } if (backendToggle.checked || backendIndependentToggle.checked && isBackendConnected) { data.backendUrl = backendUrlInput.value.trim(); } return data; 
         }
         
         previewQuizBtn.addEventListener('click', () => { const quizData = collectQuizData(); if (quizData.questions.length === 0) { alert('Add at least one question!'); return; } (new initializePlayer(JSON.parse(JSON.stringify(quizData)))).start(); });
-        downloadQuizBtn.addEventListener('click', async () => { const quizData = collectQuizData(); if (quizData.questions.length === 0) { alert('Add at least one question.'); return; } let backendUrl = localStorage.getItem('quiz_backend_url'); const editorProfile = JSON.parse(localStorage.getItem('editorProfile') || '{}'); if ((backendToggle.checked || backendIndependentToggle.checked)) { if (!editorProfile.gmail) { alert("Log in to save quizzes to cloud."); return; } if (!backendUrl) { if (confirm("Use Free Mode? (1 year storage)")) { downloadQuizBtn.disabled = true; downloadQuizBtn.textContent = "Assigning Cloud..."; try { const resp = await apiCall('assign_free_backend', {}); if(resp.status === 'success' && resp.url) { backendUrl = resp.url; quizData.subject = (quizData.subject || "General") + USER_TAG_SEPARATOR + editorProfile.gmail.toLowerCase().trim(); } else { throw new Error("Could not assign cloud storage."); } } catch(e) { alert(e.message); downloadQuizBtn.disabled = false; downloadQuizBtn.textContent = "Download & Save"; return; } } else { return; } } quizData.backendUrl = backendUrl; } downloadQuizBtn.disabled = true; downloadQuizBtn.textContent = "Saving..."; const db = getDb(); const editingId = document.getElementById('editing-quiz-id').value; let quizEntry; if (editingId) { quizEntry = findItem(editingId, db); if(quizEntry) { quizEntry.name = quizData.quizTitle; quizEntry.data = quizData; } } else { let parent = db; if (currentPath.length > 0) { parent = findItem(currentPath[currentPath.length-1], db) || db; } quizEntry = { id: `q_${Date.now()}`, type: 'quiz', name: quizData.quizTitle, data: quizData }; if (!parent.items) parent.items = []; parent.items.push(quizEntry); } saveDb(db); alert(`Quiz "${quizData.quizTitle}" saved to local dashboard!`); if ((backendToggle.checked || backendIndependentToggle.checked) && localStorage.getItem('editorProfile')) { downloadQuizBtn.textContent = "Saving to Backend..."; try { const response = await fetch(quizData.backendUrl, { method: 'POST', mode: 'cors', body: JSON.stringify({ action: 'create_quiz_sheet', quizData: quizData }) }); const result = await response.json(); if(result.status === 'success' && result.sheetId) { quizData.backendSheetId = result.sheetId; if(quizEntry) { quizEntry.backendSheetId = result.sheetId; saveDb(db); renderDashboard(); } console.log("Backend sheet created/updated:", result.sheetId); } else { throw new Error(result.message || "Backend failed."); } } catch(e) { alert("Error saving to Backend: " + e.message + "\nQuiz downloaded locally."); delete quizData.backendUrl; } } downloadQuizBtn.textContent = "Generating File..."; let suggestedName = quizData.quizTitle.trim().replace(/\s+/g, '_') || "quiz"; let fileName = prompt("Enter filename for local HTML download:", suggestedName); if(fileName === null) { downloadQuizBtn.disabled = false; downloadQuizBtn.textContent = "Download & Save"; return; } const cssStyles = [...document.querySelectorAll('style')].map(s => s.innerHTML).join('\n'); let playerHTML = document.getElementById('quiz-play-fullscreen').outerHTML + document.getElementById('popup-overlay').outerHTML + document.getElementById('student-loading').outerHTML + document.getElementById('special-char-popup').outerHTML; playerHTML = playerHTML.replace(/<button class="exit-quiz-btn".*?<\/button>/, ''); const playerScript = `const QUIZ_DATA = ${JSON.stringify(quizData)};\nconst initializePlayer = ${initializePlayer.toString()};\ndocument.addEventListener('DOMContentLoaded', () => { (new initializePlayer(QUIZ_DATA)).start(); });`; const quizFileContent = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${quizData.quizTitle}</title><style>${cssStyles}</style></head><body>${playerHTML}<script>${playerScript}<\/script></body></html>`; const blob = new Blob([quizFileContent], { type: 'text/html' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = (fileName.trim() || suggestedName) + '.html'; document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url); downloadQuizBtn.disabled = false; downloadQuizBtn.textContent = "Download & Save"; showDashboard(); });
+        downloadQuizBtn.addEventListener('click', async () => { const quizData = collectQuizData(); if (quizData.questions.length === 0) { alert('Add at least one question.'); return; } let backendUrl = localStorage.getItem('quiz_backend_url'); const editorProfile = JSON.parse(localStorage.getItem('editorProfile') || '{}'); if ((backendToggle.checked || backendIndependentToggle.checked)) { if (!backendUrl) { if(!editorProfile.gmail) { alert("Log in to save quizzes to cloud."); return; } if (confirm("Use Free Mode? (1 year storage)")) { downloadQuizBtn.disabled = true; downloadQuizBtn.textContent = "Assigning Cloud..."; try { const resp = await apiCall('assign_free_backend', {}); if(resp.status === 'success' && resp.url) { backendUrl = resp.url; quizData.subject = (quizData.subject || "General") + USER_TAG_SEPARATOR + editorProfile.gmail.toLowerCase().trim(); } else { throw new Error("Could not assign cloud storage."); } } catch(e) { alert(e.message); downloadQuizBtn.disabled = false; downloadQuizBtn.textContent = "Download & Save"; return; } } else { return; } } quizData.backendUrl = backendUrl; } downloadQuizBtn.disabled = true; downloadQuizBtn.textContent = "Saving..."; const db = getDb(); const editingId = document.getElementById('editing-quiz-id').value; let quizEntry; if (editingId) { quizEntry = findItem(editingId, db); if(quizEntry) { quizEntry.name = quizData.quizTitle; quizEntry.data = quizData; } } else { let parent = db; if (currentPath.length > 0) { parent = findItem(currentPath[currentPath.length-1], db) || db; } quizEntry = { id: `q_${Date.now()}`, type: 'quiz', name: quizData.quizTitle, data: quizData }; if (!parent.items) parent.items = []; parent.items.push(quizEntry); } saveDb(db); alert(`Quiz "${quizData.quizTitle}" saved to local dashboard!`); if (backendToggle.checked || backendIndependentToggle.checked) { downloadQuizBtn.textContent = "Saving to Backend..."; try { const response = await fetch(quizData.backendUrl, { method: 'POST', mode: 'cors', body: JSON.stringify({ action: 'create_quiz_sheet', quizData: quizData }) }); const result = await response.json(); if(result.status === 'success' && result.sheetId) { quizData.backendSheetId = result.sheetId; if(quizEntry) { quizEntry.backendSheetId = result.sheetId; saveDb(db); renderDashboard(); } console.log("Backend sheet created/updated:", result.sheetId); } else { throw new Error(result.message || "Backend failed."); } } catch(e) { alert("Error saving to Backend: " + e.message + "\nQuiz downloaded locally."); delete quizData.backendUrl; } } downloadQuizBtn.textContent = "Generating File..."; let suggestedName = quizData.quizTitle.trim().replace(/\s+/g, '_') || "quiz"; let fileName = prompt("Enter filename for local HTML download:", suggestedName); if(fileName === null) { downloadQuizBtn.disabled = false; downloadQuizBtn.textContent = "Download & Save"; return; } const cssStyles = [...document.querySelectorAll('style')].map(s => s.innerHTML).join('\n'); let playerHTML = document.getElementById('quiz-play-fullscreen').outerHTML + document.getElementById('popup-overlay').outerHTML + document.getElementById('student-loading').outerHTML + document.getElementById('special-char-popup').outerHTML; playerHTML = playerHTML.replace(/<button class="exit-quiz-btn".*?<\/button>/, ''); const playerScript = `const QUIZ_DATA = ${JSON.stringify(quizData)};\nconst initializePlayer = ${initializePlayer.toString()};\ndocument.addEventListener('DOMContentLoaded', () => { (new initializePlayer(QUIZ_DATA)).start(); });`; const quizFileContent = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${quizData.quizTitle}</title><style>${cssStyles}</style></head><body>${playerHTML}<script>${playerScript}<\/script></body></html>`; const blob = new Blob([quizFileContent], { type: 'text/html' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = (fileName.trim() || suggestedName) + '.html'; document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url); downloadQuizBtn.disabled = false; downloadQuizBtn.textContent = "Download & Save"; showDashboard(); });
+        
         document.getElementById('get-my-quizzes-btn').addEventListener('click', async () => { 
-            // Explicit login block validation verification system rule rule layer
-            if (!localStorage.getItem('editorProfile')) { alert("Access Denied: Please log into your editor account first."); return; }
-            const backendUrl = localStorage.getItem('quiz_backend_url') || document.getElementById('backend-url').value; const btn = document.getElementById('get-my-quizzes-btn'); const editorProfile = JSON.parse(localStorage.getItem('editorProfile') || '{}'); btn.textContent = 'Fetching...'; btn.disabled = true; if (backendUrl) { const result = await fetchAllBackendData(backendUrl); if (result) { renderDashboard(); let qCount = result.quizzes ? result.quizzes.length : 0, fCount = result.folders ? result.folders.length : 0; alert(`✅ Sync Successful!\nFolders: ${fCount}\nQuizzes: ${qCount}`); } else { alert("Failed to fetch quizzes."); } } else if (editorProfile.gmail) { const freeResult = await apiCall('get_free_user_data', { gmail: editorProfile.gmail }); if (freeResult.status === 'success') { const newDb = { items: [] }; const itemMap = new Map(); itemMap.set('root', newDb); const userTag = USER_TAG_SEPARATOR + editorProfile.gmail.toLowerCase().trim(); const myFolders = (freeResult.folders || []).filter(f => f.name && f.name.toLowerCase().includes(userTag)); const validFolderIds = new Set(myFolders.map(f => f.id)); const myQuizzes = (freeResult.quizzes || []).filter(q => { const subjMatches = q.subject && q.subject.toLowerCase().includes(userTag); const nameMatches = q.name && q.name.toLowerCase().includes(userTag); const parentMatches = validFolderIds.has(q.parentId); return subjMatches || nameMatches || parentMatches; }); if(myFolders) { myFolders.forEach(f => { if (!itemMap.has(f.id)) { const folder = { id: f.id, type: 'folder', name: f.name, items: [] }; itemMap.set(f.id, folder); } }); myFolders.forEach(f => { const folder = itemMap.get(f.id); const parent = itemMap.get(f.parentId) || itemMap.get('root'); if(parent && !parent.items.some(i => i.id === f.id)) { parent.items.push(folder); } }); } myQuizzes.forEach(quiz => { const parentId = quiz.parentId || 'root'; const parent = itemMap.get(parentId) || itemMap.get('root'); if (parent) { const quizItem = { id: `backend_${quiz.sheetId}`, type: 'quiz', name: quiz.name, backendSheetId: quiz.sheetId, data: null, subject: quiz.subject, difficulty: quiz.difficulty, timeLimit: quiz.timeLimit, isAdFree: quiz.isAdFree }; if (!parent.items.some(i => i.id === quizItem.id)) { parent.items.push(quizItem); } } }); sharedData = newDb; saveDb(newDb); renderDashboard(); alert(`✅ Free Tier Sync!\nFound ${myFolders.length} Folders and ${myQuizzes.length} Quizzes.`); } else { alert("Failed to find free tier quizzes."); } } else { alert('No backend URL. Connect in builder or log in for Free Mode.'); } btn.textContent = '🌍 Get my all tests'; btn.disabled = false; });
+            // Explicit login checkpoint gated runtime verification
+            const loggedInProfile = localStorage.getItem('editorProfile');
+            if(!loggedInProfile) {
+                alert("Action Blocked: You must log in to pull tests from your profile data.");
+                return;
+            }
+            
+            const backendUrl = localStorage.getItem('quiz_backend_url') || document.getElementById('backend-url').value.trim();
+            const btn = document.getElementById('get-my-quizzes-btn');
+            const editorProfile = JSON.parse(localStorage.getItem('editorProfile') || '{}');
+            btn.textContent = 'Fetching...';
+            btn.disabled = true;
+            if (backendUrl) {
+                const result = await fetchAllBackendData(backendUrl);
+                if (result) {
+                    renderDashboard();
+                    let qCount = result.quizzes ? result.quizzes.length : 0, fCount = result.folders ? result.folders.length : 0;
+                    alert(`✅ Sync Successful!\nFolders: ${fCount}\nQuizzes: ${qCount}`);
+                } else {
+                    alert("Failed to fetch quizzes.");
+                }
+            } else if (editorProfile.gmail) {
+                const freeResult = await apiCall('get_free_user_data', { gmail: editorProfile.gmail });
+                if (freeResult.status === 'success') {
+                    const newDb = { items: [] };
+                    const itemMap = new Map();
+                    itemMap.set('root', newDb);
+                    const userTag = USER_TAG_SEPARATOR + editorProfile.gmail.toLowerCase().trim();
+                    const myFolders = (freeResult.folders || []).filter(f => f.name && f.name.toLowerCase().includes(userTag));
+                    const validFolderIds = new Set(myFolders.map(f => f.id));
+                    const myQuizzes = (freeResult.quizzes || []).filter(q => {
+                        const subjMatches = q.subject && q.subject.toLowerCase().includes(userTag);
+                        const nameMatches = q.name && q.name.toLowerCase().includes(userTag);
+                        const parentMatches = validFolderIds.has(q.parentId);
+                        return subjMatches || nameMatches || parentMatches;
+                    });
+                    if(myFolders) {
+                        myFolders.forEach(f => {
+                            if (!itemMap.has(f.id)) {
+                                const folder = { id: f.id, type: 'folder', name: f.name, items: [] };
+                                itemMap.set(f.id, folder);
+                            }
+                        });
+                        myFolders.forEach(f => {
+                            const folder = itemMap.get(f.id);
+                            const parent = itemMap.get(f.parentId) || itemMap.get('root');
+                            if(parent && !parent.items.some(i => i.id === f.id)) {
+                                parent.items.push(folder);
+                            }
+                        });
+                    }
+                    myQuizzes.forEach(quiz => {
+                        const parentId = quiz.parentId || 'root';
+                        const parent = itemMap.get(parentId) || itemMap.get('root');
+                        if (parent) {
+                            const quizItem = { id: `backend_${quiz.sheetId}`, type: 'quiz', name: quiz.name, backendSheetId: quiz.sheetId, data: null, subject: quiz.subject, difficulty: quiz.difficulty, timeLimit: quiz.timeLimit, isAdFree: quiz.isAdFree };
+                            if (!parent.items.some(i => i.id === quizItem.id)) {
+                                parent.items.push(quizItem);
+                            }
+                        }
+                    });
+                    sharedData = newDb;
+                    saveDb(newDb);
+                    renderDashboard();
+                    alert(`✅ Free Tier Sync!\nFound ${myFolders.length} Folders and ${myQuizzes.length} Quizzes.`);
+                } else {
+                    alert("Failed to find free tier quizzes.");
+                }
+            } else {
+                alert('No backend connection available.');
+            }
+            btn.textContent = '🌍 Get my all tests';
+            btn.disabled = false;
+        });
         
         function handleBackNavigation(event) { if (activeQuizPlayer) return; const params = new URLSearchParams(window.location.search); if (params.get('path')) { currentPath = params.get('path').split(','); } else { currentPath = []; } if (event.state && event.state.activeTab) { activeTab = event.state.activeTab; } else { const page = params.get('page'); if(page === 'about') activeTab = 'about'; else if(page === 'search') activeTab = 'search'; else if(page === 'dashboard') activeTab = 'dashboard'; else activeTab = 'home'; } showDashboard(); }
         function setupDemoQuizzes() { const demoCards = document.querySelectorAll('.demo-quiz-card'), footerDemoLinks = document.querySelector('#footer-demo-links'); demoCards.forEach(card => { const title = card.querySelector('.demo-quiz-title').textContent, quizId = card.dataset.quizId; card.addEventListener('click', (e) => { if(e.target.classList.contains('demo-share-btn')) return; playDemoQuiz(card); }); const shareBtn = card.querySelector('.demo-share-btn'); if(shareBtn) { shareBtn.addEventListener('click', (e) => { e.stopPropagation(); const fullUrl = window.location.origin + window.location.pathname + '?quiz=' + quizId; if(navigator.share) { navigator.share({ title: title, url: fullUrl }).catch(console.error); } else { navigator.clipboard.writeText(fullUrl).then(() => alert("Link copied!\n" + fullUrl)); } }); } const link = document.createElement('a'); link.href = "?quiz=" + quizId; link.textContent = title; link.addEventListener('click', (e) => { e.preventDefault(); playDemoQuiz(card); }); footerDemoLinks.appendChild(link); }); }
@@ -1392,15 +1524,14 @@
             window.addEventListener('popstate', handleBackNavigation); 
             recordVisit(); 
             fetchAboutData(); 
+            checkEditorStatus(); 
             loadSavedBackendDetails(); 
             checkAdminStatus(); 
-            checkEditorStatus(); 
             setupDemoQuizzes(); 
             if(checkDemoHash()) return; 
             
             const params = new URLSearchParams(window.location.search); 
             
-            // Reconstruct active state cleanly directly based on real query parameter links 
             if (params.get('path')) {
                 currentPath = params.get('path').split(',');
             }
